@@ -12,7 +12,9 @@
 
     test('methods: lighten/darken', function() {
       expect(NxColor.lighten('#000', 0.1).hex()).toBe('#1A1A1A');
-      expect(NxColor.darken('#fff', 0.1).hex()).toBe('#E6E6E6');
+      expect(NxColor.lighten('#F06D06', 0.2).hex()).toBe('#FBA561');
+      expect(NxColor.darken('#F06D06', 0.1).hex()).toBe('#BE5605');
+      // console.log(NxColor.lighten('#F06D06', 0.2).hex());
     });
   });
 })();
