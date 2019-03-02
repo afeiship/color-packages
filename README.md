@@ -17,9 +17,17 @@ npm install -S afeiship/next-color --registry=https://registry.npm.taobao.org
 ```js
 import NxColor from 'next-color';
 
-// code goes here:
+// rgba:
 NxColor.rgba('#f00', 0.5);
-NxColor.rgba([255,255,0], 0.5);
+NxColor.rgba([255, 255, 0], 0.5);
+
+// lighten:
+NxColor.lighten('#f00', 0.5);
+NxColor.lighten([255, 255, 0], 0.5);
+
+// darken:
+NxColor.darken('#f00', 0.5);
+NxColor.darken([255, 255, 0], 0.5);
 ```
 
 ## resources:
