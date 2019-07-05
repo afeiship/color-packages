@@ -16,5 +16,10 @@
       expect(NxColor.darken('#F06D06', 0.1).hex()).toBe('#BE5605');
       // console.log(NxColor.lighten('#F06D06', 0.2).hex());
     });
+
+    test('methods: hsl/hsla', function() {
+      expect(NxColor.hsl(200, 0.2, 0.2).hex()).toBe('#010101');
+      expect(NxColor.hsla(200, 0.4, 0.8, 0.1).hex()).toBe('#020202');
+    });
   });
 })();

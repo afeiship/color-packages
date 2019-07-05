@@ -31,6 +31,13 @@
         var colors = color.hsl().color.slice();
         colors[2] -= inAmount * 100;
         return Color.hsl(colors);
+      },
+      // $hue,$saturation,$lightness
+      hsl: function(inH, inS, inL) {
+        return Color.hsl(inH, inS, inL);
+      },
+      hsla: function(inH, inS, inL, inAlpha) {
+        return this.hsl(inH, inS, inL).alpha(inAlpha);
       }
     }
   });

@@ -7,11 +7,13 @@ npm install -S afeiship/next-color --registry=https://registry.npm.taobao.org
 ```
 
 ## apis:
-| api     | params              | description  |
-|---------|---------------------|--------------|
-| rgba    | (inColor, inAlpha)  | sass.rgba    |
-| lighten | (inColor, inAmount) | sass.lighten |
-| darken  | (inColor, inAmount) | sass.darken  |
+| api     | params                | description  |
+| ------- | --------------------- | ------------ |
+| rgba    | (inColor, inAlpha)    | sass.rgba    |
+| lighten | (inColor, inAmount)   | sass.lighten |
+| darken  | (inColor, inAmount)   | sass.darken  |
+| hsl     | (inH,inS,inL)         | sass.hsl     |
+| hsla    | (inH,inS,inL,inAlpha) | sass.hsla    |
 
 ## usage:
 ```js
@@ -28,6 +30,10 @@ NxColor.lighten([255, 255, 0], 0.5);
 // darken:
 NxColor.darken('#f00', 0.5);
 NxColor.darken([255, 255, 0], 0.5);
+
+// hsl:
+NxColor.hsl(200,0.4,0.8);
+NxColor.hsla(200,0.4,0.8,0.1);
 ```
 
 ## resources:
