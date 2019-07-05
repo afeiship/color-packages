@@ -61,6 +61,7 @@
       },
       'hue,saturation,lightness': function(_, inIndex) {
         return function(inValue) {
+          if (!inValue) return inValue;
           var color = Color(inValue);
           var colors = color.hsl().color;
           return colors[inIndex];
