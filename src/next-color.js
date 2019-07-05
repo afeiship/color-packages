@@ -32,6 +32,26 @@
         colors[2] -= inAmount * 100;
         return Color.hsl(colors);
       },
+      saturate: function(inValue, inAmount) {
+        var color = Color(inValue);
+        var colors = color.hsl().color.slice();
+        colors[1] += inAmount * 100;
+        return Color.hsl(colors);
+      },
+      desaturate: function(inValue, inAmount) {
+        var color = Color(inValue);
+        var colors = color.hsl().color.slice();
+        colors[1] -= inAmount * 100;
+        return Color.hsl(colors);
+      },
+      adjustHue: function(inValue, inDeg) {
+        var color = Color(inValue);
+        var colors = color.hsl().color;
+        var hue = Color(inValue).hue() + inDeg;
+        hue = hue > 360 ? hue - 360 : hue;
+        hue = hue < 0 ? hue + 360 : hue;
+        return Color.hsl(hue, colors[1], colors[2]);
+      },
       // $hue,$saturation,$lightness
       hsl: function(inH, inS, inL) {
         return Color.hsl(inH, inS, inL);
@@ -39,7 +59,7 @@
       hsla: function(inH, inS, inL, inAlpha) {
         return this.hsl(inH, inS, inL).alpha(inAlpha);
       },
-      'hue,saturation,lightness': function(inName, inIndex) {
+      'hue,saturation,lightness': function(_, inIndex) {
         return function(inValue) {
           var color = Color(inValue);
           var colors = color.hsl().color;

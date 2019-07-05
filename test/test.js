@@ -27,5 +27,17 @@
       expect(NxColor.saturation('#f00')).toBe(100);
       expect(NxColor.lightness('#f00')).toBe(50);
     });
+
+    test('methos: adjust-hue', function() {
+      var res = NxColor.adjustHue('#f36', 150);
+      expect(res.hex()).toBe('#33FF66');
+    });
+
+    test.only('methos: saturate/dessaturate', function() {
+      var res1 = NxColor.saturate('#f36',0.5);
+      var res2 = NxColor.desaturate('#f36', 0.5);
+      expect(res1.hex()).toBe('#FF3366');
+      expect(res2.hex()).toBe('#CC667F');
+    });
   });
 })();
