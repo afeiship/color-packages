@@ -17,12 +17,12 @@
       // console.log(NxColor.lighten('#F06D06', 0.2).hex());
     });
 
-    test.only('methods: hsl/hsla', function() {
+    test('methods: hsl/hsla', function() {
       expect(NxColor.hsl(200, 0.2, 0.2).hex()).toBe('#010101');
       expect(NxColor.hsla(200, 0.4, 0.8, 0.1).hex()).toBe('#020202');
     });
 
-    test.only('methods: hue/saturation/lightness', function() {
+    test('methods: hue/saturation/lightness', function() {
       expect(NxColor.hue('#f00')).toBe(0);
       expect(NxColor.saturation('#f00')).toBe(100);
       expect(NxColor.lightness('#f00')).toBe(50);
