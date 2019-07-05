@@ -34,6 +34,11 @@ NxColor.darken([255, 255, 0], 0.5);
 // hsl:
 NxColor.hsl(200,0.4,0.8);
 NxColor.hsla(200,0.4,0.8,0.1);
+
+// $hue,$saturation,$lightness
+NxColor.hue('#f00');
+NxColor.saturation('#f00');
+NxColor.lightness('#f00');
 ```
 
 ## resources:

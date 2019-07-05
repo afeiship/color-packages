@@ -38,6 +38,13 @@
       },
       hsla: function(inH, inS, inL, inAlpha) {
         return this.hsl(inH, inS, inL).alpha(inAlpha);
+      },
+      'hue,saturation,lightness': function(inName, inIndex) {
+        return function(inValue) {
+          var color = Color(inValue);
+          var colors = color.hsl().color;
+          return colors[inIndex];
+        };
       }
     }
   });
