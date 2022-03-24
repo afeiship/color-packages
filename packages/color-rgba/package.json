@@ -1,6 +1,6 @@
 {
   "name": "@jswork/color-rgba",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Rgba for color.",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
